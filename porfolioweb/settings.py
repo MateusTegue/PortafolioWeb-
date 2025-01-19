@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -95,14 +98,7 @@ WSGI_APPLICATION = 'porfolioweb.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'portafoliodb'),  # Usa la variable de entorno DB_NAME si está disponible
-        'USER': os.getenv('DB_USER', 'postgres'),  # Usa la variable de entorno DB_USER si está disponible
-        'PASSWORD': os.getenv('DB_PASSWORD', '123456'),  # Usa la variable de entorno DB_PASSWORD si está disponible
-        'HOST': os.getenv('DB_HOST', 'localhost'),  # Usa la variable de entorno DB_HOST si está disponible
-        'PORT': os.getenv('DB_PORT', '5432'),  # Usa la variable de entorno DB_PORT si está disponible
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
 
 
