@@ -155,6 +155,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ALLOWED_HOSTS = [
     'locahost',
+    '127.0.0.1',
     'web-production-40bff.up.railway.app'
 ]
 
