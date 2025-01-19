@@ -161,3 +161,9 @@ ALLOWED_HOSTS = [
     'locahost',
     'web-production-40bff.up.railway.app'
 ]
+
+CSR_TRUSTED_ORIGIN = [
+    'http://*',
+    'https://web-production-40bff.up.railway.app',
+
+]
