@@ -162,7 +162,7 @@ ALLOWED_HOSTS = [
     'web-production-40bff.up.railway.app'
 ]
 
-CSR_TRUSTED_ORIGIN = [
+CSRF_TRUSTED_ORIGINS = [
     'http://*',
     'https://web-production-40bff.up.railway.app',
 
