@@ -1,0 +1,13 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+   <div class="container">
+    <img src=" {{ formacion.imagen.url }} " alt="{{post.title}}" class="img-fluid">
+    <h2> {{ formacion.title }} </h2>
+    <p> {{ formacion.date }} </p>
+    <div class="my-4">
+        <p> {{ formacion.description }} </p>
+    </div>
+    <a href="/formacion" class="btn btn-primary form-control">Volver</a>
+   </div>
+{% endblock %}

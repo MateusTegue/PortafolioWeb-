@@ -1,0 +1,33 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+{% load static %}
+
+<section class="container mt-5" >
+      <h1>Formaciones Academicas</h1>
+      <p>A lo largo de mis formaciónes académica, he adquirido una  base sólida de conocimientos y habilidades en desarrollo de software y programación. Cada etapa ha sido una oportunidad para aprender, crecer y prepararme para los retos del mundo tecnológico.</p>
+</secction>
+<div class="container">
+    <div class="row ">
+        {% for formacion in formaciones %}
+        <div class="col-md-4 p-4 ">
+          <div class="card bg-black h-100 card-project">
+            <img src="{{ formacion.imagen.url }}" alt="image of {{ formacion.title }}" class="card-img-top" style="height: 150px; width: 100%; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{{ formacion.title }}</h5>
+              <p class="card-text">{{ formacion.date }}</p>
+              <p class="card-text">{{ formacion.description|safe|truncatechars:100 }}</p>
+              <a href="{% url 'formacion:formacion_detail' formacion.id %}" class="btn btn-primary rounded-0 btn-sm mt-auto">Leer Más</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+  </div>
+  
+
+
+
+{% endblock %}

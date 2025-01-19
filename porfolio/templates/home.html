@@ -1,0 +1,46 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+  {% load static %}
+
+  <header class="row bg-black mt-5 m-auto container ">
+     <div class="col-md-4 container my-4">
+        <img src=" {% static 'porfolio/DSC_7000.JPG' %}" alt="" class="img-fluid rounded mx-auto d-block" style="max-width: 200px;">
+     </div>
+     <div class="col-md-8 my-auto">
+        <h3>Mateus Tegue</h3>
+        <h5>Desarrollador</h5>
+        <p>Conocimientos en Python, Django, HTML, CSS, JavaScript, SQL, Git, Docker</p>
+        <a href="{% static 'porfolio/Certificado.pdf' %}" class="btn btn-primary btn-ms rounded my-3" target="_blank">Desacargar CV</a>
+
+     </div>
+  </header>
+  <div class="text-center mb-5">
+    <div class="container">
+      <div class="row">
+        {% for project in projects %}
+          <div class="col-md-4 p-4">
+            <div class="card bg-black h-100 card-project">
+              <img src="{{ project.image.url }}" alt="image of {{ project.title }}" class="card-img-top" style="height: 150px; width: 100%; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description|truncatechars:100 }}</p>
+                {% if project.url %}
+                  <a href="{{ project.url }}" class="btn btn-primary rounded-0 btn-sm mt-auto" target="_blank">Ver proyecto</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    
+   
+    
+    
+
+{% endblock %}
+
+
