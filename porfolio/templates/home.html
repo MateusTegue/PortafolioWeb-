@@ -9,11 +9,15 @@
         <img src=" {% static 'porfolio/DSC_7000.JPG' %}" alt="" class="img-fluid rounded mx-auto d-block" style="max-width: 200px;">
      </div>
      <div class="col-md-8 my-auto">
-        <h3>Mateus Tegue</h3>
-        <h5>Desarrollador</h5>
-        <p>Conocimientos en Python, Django, HTML, CSS, JavaScript, SQL, Git, Docker</p>
-        <a href="{% static 'porfolio/Certificado.pdf' %}" class="btn btn-primary btn-ms rounded my-3" target="_blank">Desacargar CV</a>
+        {% for perfil in perfil %}
 
+          <h3>{{ perfil.nombre }}</h3>
+          <h5>{{ perfil.perfilOcupaciona }}</h5>
+          <p>{{ perfil.descripcion }}</p>
+          <a href="{% static 'porfolio/Hoja de Vida.pdf' %}" class="btn btn-primary btn-ms rounded my-3" target="_blank">Desacargar CV</a>
+
+
+        {% endfor %}
      </div>
   </header>
   <div class="text-start mb-5">

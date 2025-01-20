@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'porfolioweb.wsgi.application'
 # }
 
 
-
+# base de datos en Railway
 
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
