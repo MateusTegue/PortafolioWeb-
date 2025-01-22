@@ -5,7 +5,7 @@ from .models import Formacion
 
 
 def formacion(request):
-    formaciones = Formacion.objects.all()
+    formaciones = Formacion.objects.all().order_by('-date')
     return render(request, 'formacion.html' , {'formaciones': formaciones})  
 
 

@@ -8,3 +8,6 @@ class Formacion(models.Model):
     imagen = models.ImageField(upload_to='formacion/images')
     date = models.DateField(datetime.date.today)
     url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title
