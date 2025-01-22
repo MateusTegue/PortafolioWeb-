@@ -1,8 +1,8 @@
 {% extends 'layout.html'%}
 
 {% block content %}
-   <div class="container">
-    <img src=" {{ formacion.imagen.url }} " alt="{{post.title}}" class="img-fluid">
+   <div class="container text-center"> 
+    <img src="{{ formacion.imagen.url }}" alt="{{ formacion.title }}" class="img-fluid d-block mx-auto my-4"> <!-- Imagen centrada -->
     <h2> {{ formacion.title }} </h2>
     <p> {{ formacion.date }} </p>
     <div class="my-4">
