@@ -18,6 +18,7 @@
               <h5 class="card-title">{{ formacion.title|truncatechars:20 }}</h5>
               <p class="card-text">{{ formacion.date }}</p>
               <p class="card-text">{{ formacion.description|safe|truncatechars:40 }}</p>
+              <a href="{{ formacion.url }}" style="text-decoration: none; font-weight: bold;">Certificado</a>
               <a href="{% url 'formacion:formacion_detail' formacion.id %}" class="btn btn-primary rounded-0 btn-sm mt-auto">Leer Más</a>
             </div>
           </div>
