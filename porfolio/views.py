@@ -6,6 +6,11 @@ from .models import Project, Perfil
 
 
 def home(request):
-    projects = Project.objects.all()
     perfil = Perfil.objects.all()
-    return render(request, 'home.html', {'projects': projects, 'perfil': perfil})
+    return render(request, 'home.html', { 'perfil': perfil})
+
+
+
+def Projects(request):
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects': projects})

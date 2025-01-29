@@ -1,14 +1,22 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg fw-bold navbar-dark bg-black fixed-top">
   <div class="container">
-    <a class="navbar-brand fst-italic" href="/">Mateus Tegue</a>
+    <a class="navbar-brand " href="/">Mateus Tegue <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+      <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+    </svg></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
+          <a class="nav-link" href="/proyectos">Proyectos</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/formacion">Fomacion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Postulaciones </a>
         </li>
         <li class="nav-item">
           <a class="nav-link " aria-current="page" href="/blog">Blog</a>
@@ -18,9 +26,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/admin" target="_blank">Panel</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
     </div>

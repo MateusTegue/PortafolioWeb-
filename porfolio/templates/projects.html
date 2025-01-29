@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+  {% load static %}
+
+  <section class="m-0 m-auto  justify-content-center" style="width: 80%;  margin: 30px;">
+    <img src=" {% static 'porfolio/BannerProyectos.png' %}" alt="" style="width: 30rem;" class="img-fluid rounded mx-auto d-block">
+  </section>
+  <div class="text-start mt-5 mb-5">
+    <h4 class="text-center">Proyectos</h4>
+    <div class="container">
+      <div class="row">
+        {% for project in projects %}
+          <div class="col-md-4 p-4">
+            <div class="card bg-black h-100 card-project">
+              <img src="{{ project.image.url }}" alt="image of {{ project.title }}" class="card-img-top" style="height: 150px; width: 100%; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description|truncatechars:100 }}</p>
+                {% if project.url %}
+                  <a href="{{ project.url }}" class="btn btn-primary rounded-0 btn-sm mt-auto" target="_blank">Ver proyecto</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    
+   
+    
+    
+
+{% endblock %}

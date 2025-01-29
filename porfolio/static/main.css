@@ -12,3 +12,7 @@ body{
     border: 1px solid #fff;
     cursor: pointer;
     }
+
+.margin-top{
+    margin-top: 20px;
+}
